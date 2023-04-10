@@ -7,13 +7,13 @@ import { buildResolve } from "./buildResolve";
 import { BuildOptions } from "./types/options";
 
 export function buildWebpackConfig(options: BuildOptions): Configuration {
-  const {mode, paths} = options
+  const { mode, paths } = options;
 
   return {
     mode,
     entry: paths.entry,
     module: {
-      rules: buildLoaders()
+      rules: buildLoaders(options),
     },
     resolve: buildResolve(),
     output: {
@@ -23,6 +23,6 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
     },
     plugins: buildPlugins(options),
     devtool: options.isDev ? "inline-source-map" : undefined,
-    devServer: options.isDev ? buildDevServer(options) : undefined
-  }
+    devServer: options.isDev ? buildDevServer(options) : undefined,
+  };
 }
