@@ -1,5 +1,7 @@
-import { classNames } from "../../lib/classNames";
 import { HTMLAttributes, ReactNode } from "react";
+
+import { classNames } from "shared/lib";
+
 import classes from "./container.module.scss";
 
 interface ContainerProps extends HTMLAttributes<HTMLElement> {

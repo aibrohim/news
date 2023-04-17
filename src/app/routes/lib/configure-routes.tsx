@@ -1,3 +1,5 @@
+import { useRoutes } from "react-router-dom";
+
 import {
   AddNews,
   EditNews,
@@ -11,13 +13,11 @@ import {
   EditProfile,
   Login,
   SignUp,
-} from "./pages";
-import { FC, Suspense } from "react";
-import { useRoutes } from "react-router-dom";
-import { Header } from "./components/header";
+} from "pages";
+import { ReactElement } from "react";
 
-export const App: FC = () => {
-  const routes = useRoutes([
+export const configureRoutes = (): ReactElement | null =>
+  useRoutes([
     { path: "/", element: <News /> },
     {
       path: "/news",
@@ -66,11 +66,3 @@ export const App: FC = () => {
       element: "Not found",
     },
   ]);
-
-  return (
-    <>
-      <Header />
-      <Suspense fallback="Loading...">{routes}</Suspense>
-    </>
-  );
-};
