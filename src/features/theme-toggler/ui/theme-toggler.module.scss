@@ -1,0 +1,23 @@
+.ThemeToggler {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+
+  display: block;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+
+  & > svg {
+    stroke: var(--bg-inverted-color);
+  }
+
+  &:hover {
+    background-color: var(--hover-bg-color);
+  }
+
+  &:active {
+    background-color: var(--active-bg-color);
+  }
+}

@@ -1,6 +1,11 @@
 .app.light {
-  --bg-color: var(--light-gray);
+  --text-color: var(--dark-green);
+
   --bg-color: var(--light-gray-1);
   --hover-bg-color: var(--light-gray-2);
   --active-bg-color: var(--light-gray-3);
+
+  --bg-inverted-color: var(--dark-blue-1);
+  --hover-inverted-bg-color: var(--dark-blue-2);
+  --active-inverted-bg-color: var(--dark-blue-3);
 }

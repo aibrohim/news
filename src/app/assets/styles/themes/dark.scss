@@ -1,6 +1,11 @@
 .app.dark {
   --text-color: var(--white);
+
   --bg-color: var(--dark-blue-1);
   --hover-bg-color: var(--dark-blue-2);
   --active-bg-color: var(--dark-blue-3);
+
+  --bg-inverted-color: var(--light-gray-1);
+  --hover-inverted-bg-color: var(--light-gray-2);
+  --active-inverted-bg-color: var(--light-gray-3);
 }
