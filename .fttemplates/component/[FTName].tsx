@@ -6,6 +6,6 @@ interface [FTName | pascalcase]Props extends HTMLAttributes<HTMLElement> {
 }
 
 export const [FTName | pascalcase]: FC = ({...props}: [FTName | pascalcase]Props) => {
-  return <div className={classes.[FTName]} {...props}></div>
+  return <div className={classes.[FTName | pascalcase]} {...props}></div>
 };
 

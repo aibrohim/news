@@ -8,6 +8,14 @@
   --light-gray-3: #b7b7b7;
 
   --white: #fff;
-  --primary-color: #c31815;
+
+  --red-1: #c31815;
+  --red-2: #a51411;
+  --red-3: #94120f;
+
   --dark-green: #2a2a2a;
+
+  --primary-color: var(--red-1);
+  --primary-color-hover: var(--red-2);
+  --primary-color-active: var(--red-3);
 }

@@ -1,5 +1,6 @@
 import { FC } from "react";
 
+import { Button } from "shared/ui";
 import { Theme, useTheme } from "shared/config";
 
 import Moon from "shared/assets/icons/moon.svg";
@@ -18,9 +19,9 @@ export const ThemeToggler: FC = () => {
   const handleTogglerClick = () => toggleTheme();
 
   return (
-    <button className={classes.ThemeToggler} onClick={handleTogglerClick}>
+    <Button className={classes.ThemeToggler} onClick={handleTogglerClick}>
       <span className="visually-hidden">Toggle Theme</span>
       {ThemeIcons[theme]}
-    </button>
+    </Button>
   );
 };

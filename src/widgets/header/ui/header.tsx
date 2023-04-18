@@ -1,9 +1,9 @@
 import { FC, HTMLAttributes } from "react";
 
-import { ThemeToggler } from "features";
+import { ThemeToggler, LanguageToggler } from "features";
 
 import { classNames } from "shared/lib";
-import { AppLink, Container } from "shared/ui";
+import { AppLink, BtnTheme, Button, Container } from "shared/ui";
 import { Theme, useTheme } from "shared/config";
 
 import DarkLogo from "shared/assets/img/logo-dark.svg";
@@ -42,7 +42,13 @@ export const Header: FC = ({ className, ...props }: HeaderProps) => {
             ))}
           </ul>
         </nav>
+
+        <LanguageToggler />
         <ThemeToggler />
+
+        <Button className={classes.Login} theme={BtnTheme.PRIMARY}>
+          Login
+        </Button>
       </Container>
     </header>
   );
