@@ -3,8 +3,18 @@
   align-items: center;
 }
 
+.LogoLink {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+}
+
+.Logo {
+  display: block;
+}
+
 .Nav {
-  margin-left: 20px;
+  margin-left: 40px;
   margin-right: auto;
 
   display: flex;
