@@ -1,2 +1,44 @@
-.header {
+.Header {
+  // padding: 20px 0;
+}
+
+.Container {
+  display: flex;
+  align-items: center;
+}
+
+.Nav {
+  margin-left: 20px;
+  margin-right: auto;
+
+  display: flex;
+  align-items: baseline;
+}
+
+.NavList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  align-items: baseline;
+}
+
+.NavLink {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  display: block;
+  padding: 15px 20px;
+
+  transition: 0.15s ease background-color;
+
+  &:hover {
+    background-color: var(--hover-bg-color);
+  }
+
+  &:active {
+    background-color: var(--active-bg-color);
+  }
 }

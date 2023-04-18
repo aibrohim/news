@@ -1,4 +1,6 @@
 .app.dark {
-  --bg-color: var(--dark-blue);
   --text-color: var(--white);
+  --bg-color: var(--dark-blue-1);
+  --hover-bg-color: var(--dark-blue-2);
+  --active-bg-color: var(--dark-blue-3);
 }
