@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-import { Button } from "shared/ui";
-import { Theme, useTheme } from "shared/config";
+import { Button } from "shared/ui/button";
+import { Theme, useTheme } from "shared/config/theme";
 
 import Moon from "shared/assets/icons/moon.svg";
 import Sun from "shared/assets/icons/sun.svg";
@@ -9,8 +9,8 @@ import Sun from "shared/assets/icons/sun.svg";
 import classes from "./theme-toggler.module.scss";
 
 const ThemeIcons = {
-  [Theme.LIGHT]: <Moon />,
-  [Theme.DARK]: <Sun />,
+  [Theme.LIGHT]: <Moon aria-hidden="true" />,
+  [Theme.DARK]: <Sun aria-hidden="true" />,
 };
 
 export const ThemeToggler: FC = () => {
@@ -19,9 +19,11 @@ export const ThemeToggler: FC = () => {
   const handleTogglerClick = () => toggleTheme();
 
   return (
-    <Button className={classes.ThemeToggler} onClick={handleTogglerClick}>
-      <span className="visually-hidden">Toggle Theme</span>
-      {ThemeIcons[theme]}
-    </Button>
+    <Button
+      icon={ThemeIcons[theme]}
+      className={classes.ThemeToggler}
+      onClick={handleTogglerClick}
+      aria-label="Toggle Theme"
+    />
   );
 };

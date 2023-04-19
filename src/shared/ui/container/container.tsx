@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-import { classNames } from "shared/lib";
+import { classNames } from "shared/lib/classNames";
 
 import classes from "./container.module.scss";
 

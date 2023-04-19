@@ -1,6 +1,6 @@
 import { RouteObject } from "react-router-dom";
 import { AppModules } from "../configure-router";
-import { AddNews, EditNews, News, SingleNews } from "pages";
+import { AddNews, EditNews, News, SingleNews } from "pages/news";
 
 export const NEWS_ROUTES: RouteObject = {
   path: "",

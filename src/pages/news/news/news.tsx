@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Container } from "shared/ui";
+import { Container } from "shared/ui/container";
 
 const News: FC = () => {
   return (

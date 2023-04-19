@@ -1,13 +1,18 @@
 import { FC, HTMLAttributes } from "react";
 
-import { ThemeToggler, LanguageToggler } from "features";
+import { LanguageToggler } from "features/language-toggler";
+import { ThemeToggler } from "features/theme-toggler";
 
-import { classNames } from "shared/lib";
-import { AppLink, BtnTheme, Button, Container } from "shared/ui";
-import { Theme, useTheme } from "shared/config";
+import { Container } from "shared/ui/container";
+import { AppLink } from "shared/ui/app-link";
+import { BtnTheme, Button } from "shared/ui/button";
+
+import { classNames } from "shared/lib/classNames";
+import { Theme, useTheme } from "shared/config/theme";
 
 import DarkLogo from "shared/assets/img/logo-dark.svg";
 import LightLogo from "shared/assets/img/logo-light.svg";
+import Login from "shared/assets/icons/login.svg";
 
 import { navLinks } from "../constants";
 
@@ -46,7 +51,11 @@ export const Header: FC = ({ className, ...props }: HeaderProps) => {
         <LanguageToggler />
         <ThemeToggler />
 
-        <Button className={classes.Login} theme={BtnTheme.PRIMARY}>
+        <Button
+          icon={<Login stroke="currentColor" width={22} height={22} />}
+          className={classes.Login}
+          theme={BtnTheme.PRIMARY}
+        >
           Login
         </Button>
       </Container>

@@ -2,8 +2,8 @@ import { FC, Suspense } from "react";
 
 import { Routes } from "./providers/router";
 
-import { Header } from "widgets";
-import { useTheme } from "shared/config";
+import { Header } from "widgets/header";
+import { useTheme } from "shared/config/theme";
 
 import "./assets/styles/main.scss";
 

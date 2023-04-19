@@ -2,7 +2,12 @@ import { RouteObject } from "react-router-dom";
 
 import { AppModules } from "../configure-router";
 
-import { AddCategory, Categories, EditCategory, SingleCategory } from "pages";
+import {
+  AddCategory,
+  Categories,
+  EditCategory,
+  SingleCategory,
+} from "pages/categories";
 
 export const CATEGORIES_ROUTES: RouteObject = {
   path: AppModules.CATEGORIES,

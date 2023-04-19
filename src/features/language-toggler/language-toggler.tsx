@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes } from "react";
 
-import { Button } from "shared/ui";
+import { Button } from "shared/ui/button";
 
 import classes from "./language-toggler.module.scss";
 
