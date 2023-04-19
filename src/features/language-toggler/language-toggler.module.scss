@@ -1,0 +1,22 @@
+.LanguageToggler {
+  font: inherit;
+  color: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  display: block;
+  padding: 15px 20px;
+
+  transition: 0.15s ease background-color;
+
+  &:hover {
+    background-color: var(--hover-bg-color);
+  }
+
+  &:active {
+    background-color: var(--active-bg-color);
+  }
+}

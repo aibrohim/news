@@ -1,0 +1,17 @@
+.ThemeToggler {
+  display: block;
+  width: 52px;
+  height: 52px;
+
+  & svg {
+    stroke: var(--bg-inverted-color);
+  }
+
+  &:hover {
+    background-color: var(--hover-bg-color);
+  }
+
+  &:active {
+    background-color: var(--active-bg-color);
+  }
+}
