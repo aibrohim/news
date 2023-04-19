@@ -7,6 +7,7 @@ import Moon from "shared/assets/icons/moon.svg";
 import Sun from "shared/assets/icons/sun.svg";
 
 import classes from "./theme-toggler.module.scss";
+import { useTranslation } from "react-i18next";
 
 const ThemeIcons = {
   [Theme.LIGHT]: <Moon aria-hidden="true" />,
@@ -14,6 +15,8 @@ const ThemeIcons = {
 };
 
 export const ThemeToggler: FC = () => {
+  const { t } = useTranslation();
+
   const { theme, toggleTheme } = useTheme();
 
   const handleTogglerClick = () => toggleTheme();
@@ -23,7 +26,7 @@ export const ThemeToggler: FC = () => {
       icon={ThemeIcons[theme]}
       className={classes.ThemeToggler}
       onClick={handleTogglerClick}
-      aria-label="Toggle Theme"
+      aria-label={t("toggle-theme")}
     />
   );
 };

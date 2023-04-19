@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@svgr/webpack": "^7.0.0",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.33",
@@ -37,8 +38,12 @@
     "webpack-dev-server": "^4.13.2"
   },
   "dependencies": {
+    "i18next": "^22.4.14",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
     "react-router-dom": "^6.10.0"
   }
 }

@@ -5,6 +5,8 @@ import { ThemeProvider } from "app/providers/theme";
 
 import { App } from "app/app";
 
+import "shared/config/i18n";
+
 const container = document.getElementById("root");
 
 if (container) {

@@ -17,6 +17,7 @@ import Login from "shared/assets/icons/login.svg";
 import { navLinks } from "../constants";
 
 import classes from "./header.module.scss";
+import { useTranslation } from "react-i18next";
 
 const ThemeLogos = {
   [Theme.LIGHT]: <DarkLogo />,
@@ -28,6 +29,8 @@ interface HeaderProps extends HTMLAttributes<HTMLElement> {
 }
 
 export const Header: FC = ({ className, ...props }: HeaderProps) => {
+  const { t } = useTranslation();
+
   const { theme } = useTheme();
 
   return (
@@ -39,7 +42,7 @@ export const Header: FC = ({ className, ...props }: HeaderProps) => {
         <nav className={classes.Nav}>
           <ul className={classes.NavList}>
             {navLinks.map((item) => (
-              <li>
+              <li key={item.to}>
                 <AppLink className={classes.NavLink} to={item.to}>
                   {item.text}
                 </AppLink>
@@ -56,7 +59,7 @@ export const Header: FC = ({ className, ...props }: HeaderProps) => {
           className={classes.Login}
           theme={BtnTheme.PRIMARY}
         >
-          Login
+          {t("login-btn")}
         </Button>
       </Container>
     </header>
