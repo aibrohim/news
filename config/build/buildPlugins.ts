@@ -29,5 +29,5 @@ export function buildPlugins({
     plugins.push(new webpack.HotModuleReplacementPlugin());
   }
 
-  return;
+  return plugins;
 }
