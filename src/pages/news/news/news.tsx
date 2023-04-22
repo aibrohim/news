@@ -3,11 +3,11 @@ import { useTranslation } from "react-i18next";
 import { Container } from "shared/ui/container";
 
 const News: FC = () => {
-  const { t } = useTranslation("main");
+  const { t } = useTranslation("news");
 
   return (
     <Container>
-      <h1>{t("title")}</h1>
+      <h1>{t("list.title")}</h1>
     </Container>
   );
 };

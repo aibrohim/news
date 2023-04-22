@@ -1,0 +1,14 @@
+{
+  "list": {
+    "title": "News Page"
+  },
+  "add": {
+    "title": "Add new news"
+  },
+  "edit": {
+    "title": "Edit news"
+  },
+  "single": {
+    "title": "News #1"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "list": {
+    "title": "Categories"
+  },
+  "add": {
+    "title": "Add new category"
+  },
+  "edit": {
+    "title": "Edit Category"
+  },
+  "single": {
+    "title": "Category"
+  }
+}

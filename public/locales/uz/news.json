@@ -1,0 +1,14 @@
+{
+  "list": {
+    "title": "Yangiliklar"
+  },
+  "add": {
+    "title": "Yangi yangilik"
+  },
+  "edit": {
+    "title": "Yangilikni o'zgartirish"
+  },
+  "single": {
+    "title": "Yangilik - #"
+  }
+}
