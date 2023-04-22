@@ -16,7 +16,7 @@ export const Container = ({
 }: ContainerProps) => {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <div className={classNames(classes.container, {}, [className])} {...props}>
+    <div className={classNames(classes.Container, {}, [className])} {...props}>
       {children}
     </div>
   );

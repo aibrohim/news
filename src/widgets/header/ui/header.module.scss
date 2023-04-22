@@ -16,7 +16,6 @@
 .Nav {
   margin-left: 40px;
   margin-right: auto;
-
   display: flex;
   align-items: baseline;
 }
@@ -25,7 +24,6 @@
   padding: 0;
   margin: 0;
   list-style: none;
-
   display: flex;
   align-items: baseline;
 }
@@ -34,10 +32,8 @@
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-
   display: block;
   padding: 15px 20px;
-
   transition: 0.15s ease background-color;
 
   &:hover {

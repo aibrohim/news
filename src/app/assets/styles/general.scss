@@ -1,8 +1,3 @@
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
 *,
 *::before,
 *::after {
@@ -11,6 +6,8 @@ html {
 
 html {
   height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,23 +15,20 @@ body {
   padding: 0;
 }
 
-.app {
+.App {
   display: flex;
   flex-direction: column;
   height: 100vh;
   padding: 0;
   margin: 0;
-
   font: var(--font-m);
   font-weight: 400;
-
   background-color: var(--bg-color);
   color: var(--text-color);
-
   transition: 0.1s ease color, 0.1s ease background-color;
 }
 
-.visually-hidden {
+.VisuallyHidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
