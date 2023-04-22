@@ -1,9 +1,9 @@
 import { FC, Suspense } from "react";
 
-import { Routes } from "./providers/router";
-
 import { Header } from "widgets/header";
 import { useTheme } from "shared/config/theme";
+
+import { Routes } from "./providers/router";
 
 import "./assets/styles/main.scss";
 
@@ -12,7 +12,7 @@ export const App: FC = () => {
 
   return (
     <Suspense fallback="Loading...">
-      <div className={"app " + theme}>
+      <div className={`app ${theme}`}>
         <Header />
         <Suspense fallback="Loading...">
           <Routes />

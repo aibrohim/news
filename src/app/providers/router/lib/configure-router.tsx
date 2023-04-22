@@ -1,6 +1,4 @@
-import { useRoutes } from "react-router-dom";
-
-import { ReactElement } from "react";
+import { RouteObject } from "react-router-dom";
 
 import {
   AUTH_ROUTES,
@@ -17,19 +15,11 @@ export const enum AppModules {
   USER = "user",
 }
 
-console.log([
-  NEWS_ROUTES,
-  CATEGORIES_ROUTES,
-  USER_ROUTES,
-  AUTH_ROUTES,
-  NOT_FOUND_ROUTE,
-]);
-
-export const configureRoutes = (): ReactElement | null =>
-  useRoutes([
+export const configureRoutes = (): RouteObject[] =>
+  [
     NEWS_ROUTES,
     CATEGORIES_ROUTES,
     USER_ROUTES,
     AUTH_ROUTES,
     NOT_FOUND_ROUTE,
-  ]);
+  ];

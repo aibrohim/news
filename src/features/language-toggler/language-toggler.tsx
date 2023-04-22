@@ -1,9 +1,9 @@
-import { FC, HTMLAttributes } from "react";
+import { FC } from "react";
 
 import { Button } from "shared/ui/button";
 
-import classes from "./language-toggler.module.scss";
 import { useTranslation } from "react-i18next";
+import classes from "./language-toggler.module.scss";
 
 export enum Language {
   "EN" = "en",
@@ -15,9 +15,8 @@ const nextLanguages = {
   [Language.UZ]: Language.EN,
 };
 
-interface LanguageTogglerProps extends HTMLAttributes<HTMLElement> {}
 
-export const LanguageToggler: FC = ({ ...props }: LanguageTogglerProps) => {
+export const LanguageToggler: FC = () => {
   const { i18n } = useTranslation();
 
   const handleTogglerClick = () => {
@@ -28,7 +27,6 @@ export const LanguageToggler: FC = ({ ...props }: LanguageTogglerProps) => {
     <Button
       className={classes.LanguageToggler}
       onClick={handleTogglerClick}
-      {...props}
     >
       {nextLanguages[i18n.language as Language]}
     </Button>
