@@ -1,0 +1,14 @@
+{
+  "add": {
+    "title": "Yangi kategoriya qo'shish"
+  },
+  "list": {
+    "title": "Kategoriyalar"
+  },
+  "edit": {
+    "title": "Kategoriyani o'zgartirish"
+  },
+  "single": {
+    "title": "Kategoriya"
+  }
+}

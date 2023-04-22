@@ -1,0 +1,8 @@
+{
+  "view": {
+    "title": "My Profile"
+  },
+  "edit": {
+    "title": "Edit profile"
+  }
+}
