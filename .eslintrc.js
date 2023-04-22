@@ -1,17 +1,23 @@
 module.exports = {
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react-hooks"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+    },
+    "ecmaVersion": 'latest',
+    "sourceType": 'module',
   },
+  "plugins": ["@typescript-eslint", "react"],
   "rules": {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
@@ -31,9 +37,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     quotes: ["error", "double"],
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }
+  globals: {
+    __IS_DEV__: true,
+},
 }
