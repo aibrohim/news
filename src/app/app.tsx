@@ -11,13 +11,13 @@ export const App: FC = () => {
   const { theme } = useTheme();
 
   return (
-    <Suspense fallback="Loading...">
-      <div className={`app ${theme}`}>
+    <div className={`App ${theme}`}>
+      <Suspense fallback="Loading...">
         <Header />
         <Suspense fallback="Loading...">
           <Routes />
         </Suspense>
-      </div>
-    </Suspense>
+      </Suspense>
+    </div>
   );
 };
