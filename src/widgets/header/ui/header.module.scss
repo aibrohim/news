@@ -33,7 +33,7 @@
   text-transform: uppercase;
   text-decoration: none;
   display: block;
-  padding: 15px 20px;
+  padding: var(--padding-m);
   transition: 0.15s ease background-color;
 
   &:hover {
