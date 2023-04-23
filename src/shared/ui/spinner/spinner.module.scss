@@ -1,3 +1,36 @@
+.Wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Wrapper.Column {
+  flex-direction: column;
+}
+
+.Wrapper.Row {
+  flex-direction: row;
+}
+
+.Text {
+  margin: 0;
+}
+
+.Text.Large {
+  font: var(--font-l);
+  font-weight: initial;
+}
+
+.Text.Medium {
+  font: var(--font-m);
+  font-weight: initial;
+}
+
+.Text.Small {
+  font: var(--font-s);
+  font-weight: initial;
+}
+
 .Spinner {
   --size-l: 80px;
   --size-m: 40px;
