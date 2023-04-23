@@ -29,8 +29,6 @@
 }
 
 .NavLink {
-  font-weight: bold;
-  text-transform: uppercase;
   text-decoration: none;
   display: block;
   padding: var(--padding-m);
@@ -43,8 +41,4 @@
   &:active {
     background-color: var(--active-bg-color);
   }
-}
-
-.Login {
-  font-weight: 700;
 }

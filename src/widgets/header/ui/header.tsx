@@ -56,7 +56,6 @@ export const Header: FC = ({ className }: HeaderProps) => {
 
         <Button
           icon={<Login stroke="currentColor" width={22} height={22} />}
-          className={classes.Login}
           theme={BtnTheme.PRIMARY}
         >
           {t("login-btn")}
