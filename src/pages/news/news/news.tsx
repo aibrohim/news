@@ -11,11 +11,9 @@ const News: FC = () => {
     <Container>
       <h1>{t("list.title")}</h1>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <Spinner size={Size.LARGE} direction={Direction.ROW}>
-          Hello
-        </Spinner>
-        <Spinner size={Size.MEDIUM}>Mello</Spinner>
-        <Spinner size={Size.SMALL}>Shmello</Spinner>
+        <Spinner size={Size.LARGE} direction={Direction.ROW} tip="Hello" />
+        <Spinner size={Size.MEDIUM} tip="Mello" />
+        <Spinner size={Size.SMALL} tip="Shmello" />
       </div>
     </Container>
   );

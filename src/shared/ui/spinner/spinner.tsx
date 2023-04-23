@@ -14,14 +14,14 @@ interface SpinnerProps {
   size?: Size;
   className?: string;
   direction?: Direction;
-  children?: ReactNode;
+  tip?: string;
 }
 
 export const Spinner: FC<SpinnerProps> = ({
   size = Size.MEDIUM,
   direction = Direction.COLUMN,
   className,
-  children,
+  tip = "",
 }) => {
   return (
     <div className={classNames(classes.Wrapper, {}, [classes[direction]])}>
@@ -36,9 +36,7 @@ export const Spinner: FC<SpinnerProps> = ({
         <div></div>
         <div></div>
       </div>
-      <p className={classNames(classes.Text, {}, [classes[size]])}>
-        {children}
-      </p>
+      <p className={classNames(classes.Text, {}, [classes[size]])}>{tip}</p>
     </div>
   );
 };
