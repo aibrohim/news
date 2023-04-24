@@ -1,7 +1,7 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 
-import { classNames } from "shared/lib/classNames";
 import { Size } from "shared/constants/size";
+import { classNames } from "shared/lib/classNames";
 
 import classes from "./spinner.module.scss";
 

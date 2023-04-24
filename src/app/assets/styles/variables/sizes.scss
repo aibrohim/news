@@ -1,17 +1,25 @@
 :root {
-  --padding-y-s: 10px;
-  --padding-x-s: 15px;
+  --border-size: 1px;
+
+  --padding-y-s: 9px;
+  --padding-x-s: 14px;
   --padding-s: var(--padding-y-s) var(--padding-x-s);
 
-  --padding-y-m: 15px;
-  --padding-x-m: 20px;
+  --padding-y-m: 14px;
+  --padding-x-m: 19px;
   --padding-m: var(--padding-y-m) var(--padding-x-m);
 
-  --padding-y-l: 20px;
-  --padding-x-l: 25px;
+  --padding-y-l: 19px;
+  --padding-x-l: 24px;
   --padding-l: var(--padding-y-l) var(--padding-x-l);
 
-  --height-s: calc(var(--padding-y-s) * 2 + var(--font-line-s));
-  --height-m: calc(var(--padding-y-m) * 2 + var(--font-line-m));
-  --height-l: calc(var(--padding-y-l) * 2 + var(--font-line-l));
+  --height-s: calc(
+    var(--border-size) * 2 + var(--padding-y-s) * 2 + var(--font-line-s)
+  );
+  --height-m: calc(
+    var(--border-size) * 2 + var(--padding-y-m) * 2 + var(--font-line-m)
+  );
+  --height-l: calc(
+    var(--border-size) * 2 + var(--padding-y-l) * 2 + var(--font-line-l)
+  );
 }
