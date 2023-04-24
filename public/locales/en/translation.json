@@ -1,4 +1,8 @@
 {
   "login-btn": "Login",
-  "toggle-theme": "Toggle Language"
+  "toggle-theme": "Toggle Language",
+  "error": {
+    "title": "Something went wrong, please refresh the page!",
+    "refresh": "Refresh"
+  }
 }

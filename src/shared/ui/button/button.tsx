@@ -8,6 +8,7 @@ import classes from "./button.module.scss";
 export enum BtnTheme {
   CLEAR = "Clear",
   PRIMARY = "Primary",
+  DEFAULT = "Default",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLElement> {

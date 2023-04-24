@@ -1,4 +1,8 @@
 {
   "login-btn": "Kirish",
-  "toggle-theme": "Tilni o'zgartirish"
+  "toggle-theme": "Tilni o'zgartirish",
+  "error": {
+    "title": "Xatolik ketdi, sahifani yangilashga urinib ko'ring!",
+    "refresh": "Yangilash"
+  }
 }
