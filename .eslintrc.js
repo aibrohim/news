@@ -18,7 +18,6 @@ module.exports = {
     },
     ecmaVersion: "latest",
     sourceType: "module",
-    project: "./tsconfig.json",
   },
   plugins: ["@typescript-eslint", "react", "i18next"],
   rules: {
