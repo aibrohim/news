@@ -34,7 +34,10 @@ export const Header: FC = ({ className }: HeaderProps) => {
   const { theme } = useTheme();
 
   return (
-    <header className={classNames(classes.Header, {}, [className])}>
+    <header
+      className={classNames(classes.Header, {}, [className])}
+      data-testid="header"
+    >
       <Container className={classes.Container}>
         <AppLink to="/" className={classes.LogoLink}>
           {ThemeLogos[theme]}

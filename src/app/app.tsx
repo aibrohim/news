@@ -14,7 +14,7 @@ export const App: FC = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={`App ${theme}`}>
+    <div className={`App ${theme}`} data-testid="app">
       <Suspense fallback={<PageLoader />}>
         <ErrorBoundary>
           <Header />
