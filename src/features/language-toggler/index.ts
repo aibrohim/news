@@ -1,1 +1,1 @@
-export * from "./language-toggler";
+export * from "./ui";
