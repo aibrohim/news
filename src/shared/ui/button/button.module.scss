@@ -32,9 +32,21 @@
 .Button {
   @include clear;
 
-  border: var(--border-size) solid;
   display: inline-block;
-  transition: 0.15s ease background-color;
+  transition: 0.15s ease background-color, 0.15s ease box-shadow;
+  background-color: var(--bg-c);
+  border: var(--border-size) solid var(--bg-c);
+
+  &:hover {
+    border-color: var(--hover-c);
+    background-color: var(--hover-c);
+  }
+
+  &:active {
+    border-color: var(--active-c);
+    background-color: var(--active-c);
+    box-shadow: 0 0 3px var(--bg-c);
+  }
 }
 
 .Small {
@@ -58,33 +70,35 @@
 .Clear {
   @include clear;
 
-  border-color: inherit;
+  --bg-c: inherit;
 }
 
 .Primary {
   color: #fff;
-  border-color: var(--primary-color);
-  background-color: var(--primary-color);
 
-  &:hover {
-    border-color: var(--primary-color-hover);
-    background-color: var(--primary-color-hover);
-  }
-
-  &:active {
-    border-color: var(--primary-color-active);
-    background-color: var(--primary-color-active);
-  }
+  --bg-c: var(--primary-color);
+  --hover-c: var(--primary-color-hover);
+  --active-c: var(--primary-color-active);
 }
 
 .Default {
-  color: inherit;
+  color: var(--text-color-inverted);
+  --bg-c: var(--bg-inverted-color);
+  --hover-c: var(--hover-inverted-bg-color);
+  --active-c: var(--active-inverted-bg-color);
+}
+
+.Outline {
+  background-color: inherit;
+  color: var(--bg-c);
 
   &:hover {
-    background-color: var(--hover-bg-color);
+    background-color: inherit;
+    color: var(--hover-c);
   }
 
   &:active {
-    background-color: var(--active-bg-color);
+    background-color: inherit;
+    color: var(--active-c);
   }
 }

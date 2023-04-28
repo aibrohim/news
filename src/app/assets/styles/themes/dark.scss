@@ -1,11 +1,12 @@
 .App.Dark {
   --text-color: var(--white);
+  --text-color-inverted: var(--dark-green);
 
   --bg-color: var(--dark-blue-1);
   --hover-bg-color: var(--dark-blue-2);
   --active-bg-color: var(--dark-blue-3);
 
   --bg-inverted-color: var(--light-gray-1);
-  --hover-bg-inverted-color: var(--light-gray-2);
-  --active-bg-inverted-color: var(--light-gray-3);
+  --hover-inverted-bg-color: var(--light-gray-2);
+  --active-inverted-bg-color: var(--light-gray-3);
 }

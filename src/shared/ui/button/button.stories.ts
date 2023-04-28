@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { withThemeDecorator } from "shared/config/storybook/withThemeDecorator";
+import { Theme } from "shared/config/theme";
 
 import { BtnTheme, Button } from "shared/ui/button";
 
@@ -14,9 +16,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Default: Story = {
+export const Light: Story = {
   args: {
-    theme: BtnTheme.PRIMARY,
+    theme: BtnTheme.DEFAULT,
     children: "Button",
   },
+};
+
+export const Dark: Story = {
+  args: {
+    theme: BtnTheme.DEFAULT,
+    children: "Button",
+  },
+  decorators: [withThemeDecorator(Theme.DARK)],
 };

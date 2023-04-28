@@ -1,6 +1,9 @@
 import type { Preview } from "@storybook/react";
 
-import "../../src/app/assets/styles/main.scss";
+import { Theme } from "../../src/shared/config/theme";
+
+import { withThemeDecorator } from "../../src/shared/config/storybook/withThemeDecorator";
+import { withStylesDecorator } from "../../src/shared/config/storybook/withStylesDecorator";
 
 const preview: Preview = {
   parameters: {
@@ -12,6 +15,7 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [withStylesDecorator, withThemeDecorator(Theme.LIGHT)],
 };
 
 export default preview;
