@@ -3,14 +3,14 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { withThemeDecorator } from "shared/config/storybook/withThemeDecorator";
 import { Theme } from "shared/config/theme";
 
-import { ThemeToggler } from "./theme-toggler";
+import AddNews from "./add-news";
 
 const meta = {
-  title: "Features/Theme Toggler",
-  component: ThemeToggler,
+  title: "Pages/News/Add News",
+  component: AddNews,
   tags: ["autodocs"],
   argTypes: {},
-} satisfies Meta<typeof ThemeToggler>;
+} satisfies Meta<typeof AddNews>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
