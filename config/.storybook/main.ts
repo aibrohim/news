@@ -3,7 +3,11 @@ import path from "path";
 import type { StorybookConfig } from "@storybook/react-webpack5";
 
 import { BuildPaths } from "../build/types/options";
+
 import { buildCssLoader } from "../build/loaders/buildCssLoader";
+import { buildSvgLoader } from "../build/loaders/buildSvgLoader";
+
+import webpack from "webpack";
 
 const config: StorybookConfig = {
   stories: ["../../src/**/*.mdx", "../../src/**/*.stories.@(js|jsx|ts|tsx)"],
@@ -19,6 +23,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  staticDirs: ["../../public/"],
   webpackFinal(config) {
     const paths: BuildPaths = {
       build: "",
@@ -31,6 +36,23 @@ const config: StorybookConfig = {
     config.resolve?.extensions?.push("ts", "tsx");
 
     config.module?.rules?.push(buildCssLoader(true));
+
+    if (config.module?.rules) {
+      config.module.rules = config.module.rules.map((rule: any) => {
+        if (/svg/.test(rule.test as string)) {
+          return { ...rule, exclude: /\.svg$/i };
+        }
+
+        return rule;
+      });
+    }
+    config.module?.rules?.push(buildSvgLoader());
+
+    config.plugins?.push(
+      new webpack.DefinePlugin({
+        __IS_DEV__: JSON.stringify(false),
+      })
+    );
 
     return config;
   },

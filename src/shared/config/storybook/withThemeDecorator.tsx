@@ -1,16 +1,19 @@
 /* eslint-disable react/display-name */
 import { Decorator, StoryFn } from "@storybook/react";
 import { Theme } from "../theme";
+import { ThemeProvider } from "app/providers/theme";
 
 export const withThemeDecorator =
   (theme: Theme): Decorator =>
     (Story: StoryFn) => {
       return (
-        <div className={`App ${theme}`}>
-          <div className="Page">
+        <ThemeProvider externalDefaultTheme={theme}>
+          <div className={`App ${theme}`}>
+            <div className="Page">
 
-            <Story />
+              <Story />
+            </div>
           </div>
-        </div>
+        </ThemeProvider>
       );
     };
