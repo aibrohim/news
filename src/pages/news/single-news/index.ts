@@ -1,1 +1,1 @@
-export * from "./single-news.async";
+export * from "./ui";

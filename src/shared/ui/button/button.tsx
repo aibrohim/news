@@ -16,6 +16,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLElement> {
   className?: string;
   icon?: ReactElement;
   size?: Size;
+  outline?: boolean;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -23,12 +24,13 @@ export const Button: FC<ButtonProps> = ({
   className,
   icon = null,
   size = Size.MEDIUM,
+  outline = false,
   children,
   ...props
 }) => {
   return (
     <button
-      className={classNames(classes.Button, {}, [
+      className={classNames(classes.Button, { [classes.Outline]: outline }, [
         classes[theme],
         classes[size],
         className,

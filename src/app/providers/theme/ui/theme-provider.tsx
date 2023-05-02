@@ -8,13 +8,14 @@ import {
 
 interface ThemeProviderProps {
   children?: React.ReactNode;
+  externalDefaultTheme?: Theme
 }
 
 const defaultTheme: Theme =
   (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGHT;
 
-export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
+export const ThemeProvider: FC<ThemeProviderProps> = ({ externalDefaultTheme, children }) => {
+  const [theme, setTheme] = useState<Theme>(externalDefaultTheme || defaultTheme);
 
   const value = useMemo(
     () => ({

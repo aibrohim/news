@@ -1,5 +1,5 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { RuleSetRule } from "webpack";
+import { buildCssLoader } from "./loaders/buildCssLoader";
 import { BuildOptions } from "./types/options";
 
 export function buildLoaders(options: BuildOptions): RuleSetRule[] {
@@ -17,24 +17,7 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     ],
   };
 
-  const cssLoader = {
-    test: /\.s[ac]ss$/i,
-    use: [
-      !options.isDev ? MiniCssExtractPlugin.loader : "style-loader",
-      {
-        loader: "css-loader",
-        options: {
-          modules: {
-            auto: (resPath: string) => resPath.includes(".module."),
-            localIdentName: options.isDev
-              ? "[path][name]__[local]"
-              : "[hash:base64:8]",
-          },
-        },
-      },
-      "sass-loader",
-    ],
-  };
+  const cssLoader = buildCssLoader(options.isDev);
 
   const typesciprtRule: RuleSetRule = {
     test: /\.tsx?$/,

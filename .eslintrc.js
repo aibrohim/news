@@ -2,33 +2,25 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true,
+    jest: true
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:i18next/recommended",
-  ],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:react/recommended", "plugin:react-hooks/recommended", "plugin:i18next/recommended", "plugin:storybook/recommended"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: "latest",
-    sourceType: "module",
-    project: "./tsconfig.json",
+    sourceType: "module"
   },
   plugins: ["@typescript-eslint", "react", "i18next"],
   rules: {
     "react/jsx-indent": [2, 2],
     "react/jsx-indent-props": [2, 2],
     indent: [2, 2],
-    "react/jsx-filename-extension": [
-      2,
-      { extensions: [".js", ".jsx", ".tsx"] },
-    ],
+    "react/jsx-filename-extension": [2, {
+      extensions: [".js", ".jsx", ".tsx"]
+    }],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "no-unused-vars": "off",
@@ -42,14 +34,14 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
     "no-console": ["warn"],
-    quotes: ["error", "double"],
+    quotes: ["error", "double"]
   },
   globals: {
-    __IS_DEV__: true,
+    __IS_DEV__: true
   },
   settings: {
     react: {
-      version: "detect",
-    },
-  },
+      version: "detect"
+    }
+  }
 };

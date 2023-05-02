@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Size } from "shared/constants/size";
+import { BtnTheme, Button } from "shared/ui/button";
 import { Container } from "shared/ui/container";
 import { Direction, Spinner } from "shared/ui/spinner";
 
@@ -24,6 +25,15 @@ const News: FC = () => {
         <Spinner size={Size.MEDIUM} tip="Mello" />
         <Spinner size={Size.SMALL} tip="Shmello" />
       </div>
+
+      <Button theme={BtnTheme.PRIMARY}>{"Button Primary"}</Button>
+      <Button theme={BtnTheme.PRIMARY} outline>
+        {"Button Primary Outlined"}
+      </Button>
+      <Button theme={BtnTheme.DEFAULT}>{"Button Default"}</Button>
+      <Button theme={BtnTheme.DEFAULT} outline>
+        {"Button Default Outlined"}
+      </Button>
     </Container>
   );
 };

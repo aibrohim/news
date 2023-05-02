@@ -15,11 +15,10 @@ export const enum AppModules {
   USER = "user",
 }
 
-export const configureRoutes = (): RouteObject[] =>
-  [
-    NEWS_ROUTES,
-    CATEGORIES_ROUTES,
-    USER_ROUTES,
-    AUTH_ROUTES,
-    NOT_FOUND_ROUTE,
-  ];
+export const configureRoutes = (): RouteObject[] => [
+  NEWS_ROUTES,
+  CATEGORIES_ROUTES,
+  USER_ROUTES,
+  AUTH_ROUTES,
+  NOT_FOUND_ROUTE,
+];

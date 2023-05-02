@@ -27,6 +27,7 @@ export const ThemeToggler: FC = () => {
       className={classes.ThemeToggler}
       onClick={handleTogglerClick}
       aria-label={t("toggle-theme")}
+      data-testid="theme-toggler"
     />
   );
 };
