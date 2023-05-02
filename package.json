@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:unit": "jest --config ./config/jest/jest.config.ts",
     "start": "webpack serve --env port=4000",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
@@ -12,8 +11,9 @@
     "lint:ts:fix": "npx eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
+    "test:unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/.storybook",
-    "build-storybook": "storybook build -c ./config/.storybook"
+    "storybook:build": "storybook build -c ./config/.storybook"
   },
   "keywords": [],
   "author": "",
@@ -85,5 +85,20 @@
     "react-i18next": "^12.2.0",
     "react-refresh": "^0.14.0",
     "react-router-dom": "^6.10.0"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }
