@@ -16,7 +16,7 @@ export const App: FC = () => {
   return (
     <div className={`App ${theme}`} data-testid="app">
       <Suspense fallback={<PageLoader />}>
-          <ErrorBoundary>
+        <ErrorBoundary>
           <Header />
           <div className={"Page"}>
             <Routes />
